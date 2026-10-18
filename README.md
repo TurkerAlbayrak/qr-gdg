@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# qrgdg — Ücretsiz ve Hızlı QR Kod Oluşturucu
 
-## Getting Started
+Modern, mobil öncelikli, tamamen istemci tarafında (client-side) çalışan ve hiçbir kişisel veri kaydetmeyen açık kaynaklı QR kod oluşturma ve paylaşma platformu.
 
-First, run the development server:
+## Özellikler
+
+- **28 Farklı QR Türü:**
+  - **İnternet:** Web sitesi URL, PDF/dosya linki, online restoran/kafe dijital menü, Google Forms/Typeform, ürün/hizmet sayfası, mobil uygulama indirme bağlantısı.
+  - **Sosyal Medya:** WhatsApp sohbet (otomatik mesajlı), Instagram profili, YouTube, TikTok, Facebook, LinkedIn, Telegram, Discord daveti, diğer profiller.
+  - **İletişim:** Telefon arama (`tel:`), e-posta (`mailto:`), SMS (`sms:`), vCard (tek dokunuşla rehbere kayıt), MeCard.
+  - **Kişisel & Ağ:** Wi-Fi ağına şifresiz bağlanma (`WIFI:`), takvim etkinlikleri (iCalendar).
+  - **Konum:** Google Haritalar arama linki, harita koordinatları (`geo:`).
+  - **Finans & Özel:** IBAN / ödeme linki, düz metin, özel protokol/JSON formatı.
+- **Canlı Ön İzleme:** Form alanları değiştikçe gerçek zamanlı render.
+- **Yüksek Çözünürlüklü Dışa Aktarma:**
+  - PNG indirme (256px - 2048px).
+  - Vektörel SVG indirme (matbaa ve tabela baskısına uygun).
+- **Paylaşım Entegrasyonları:**
+  - **WhatsApp:** Web Share API veya doğrudan sohbet linki.
+  - **Instagram:** Cihaza otomatik kaydetme ve adım adım hikaye paylaşım rehberi.
+  - **Kopyalama:** QR görselini veya metin içeriğini panoya kopyalama.
+- **Özelleştirme:** Ön plan ve arka plan renk seçici, logo/ikon yükleme, hata düzeltme seviyeleri (L, M, Q, H).
+- **Yerel Geçmiş (LocalStorage):** Oluşturulan son kodlar sunucuya gitmeden tarayıcıda saklanır.
+- **Koyu ve Açık Tema:** Sistem tercihi ve manuel geçiş desteği.
+
+## Kurulum ve Çalıştırma
 
 ```bash
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Tarayıcınızda `http://localhost:3000` adresine gidin.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Vercel ile Yayınlama
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Bu depoyu GitHub hesabınıza forklayın veya ekleyin.
+2. [Vercel](https://vercel.com) paneline gidin ve **"Add New Project"** seçin.
+3. `qr-gdg` reposunu seçin ve **Deploy** butonuna tıklayın.
+4. Sıfır konfigürasyon ile doğrudan yayına alınır.
 
-## Learn More
+## Lisans
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT
